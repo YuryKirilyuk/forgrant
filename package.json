@@ -1,7 +1,7 @@
 {
-  "name": "myproject",
+  "name": "forgrant",
   "version": "1.0.0",
-  "description": "My First Gulp Project",
+  "description": "Forgrant Project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "Yury K",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^4.1.1",
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
@@ -21,7 +22,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
     "gulp-uglifyjs": "^0.6.2",
-    "imagemin-pngquant": "^4.2.2",
-    "gulp.spritesmith": "^6.2.1"
+    "gulp.spritesmith": "^6.2.1",
+    "imagemin-pngquant": "^4.2.2"
   }
 }
