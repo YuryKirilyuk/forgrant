@@ -1,83 +1,156 @@
-
-//main styles
-
-.main-wrapper{
-	padding: 0 0 0 0;
-	min-width: $min-width;
-  width: 100%;
-	position: relative;
-	overflow: hidden;
-	min-height:100%;
-	display: flex;
-	flex-direction:column;
-	justify-content:flex-start;
-}
-.wrapper{
-	min-width: $min-width;
-	max-width: $max-width;
-	padding: 0 2rem;
-	margin: 0 auto;
-	position: relative;
-}
-
-/* titles */
-p{	
-	@include font($base-font-size,$base-line-height,$text-color);
-	padding: 1.5rem 0;
-	font-weight: 400;	
-}
-h1{	
-	@include font($font-size-h1,$line-height-h1,$title-color);
-	font-family: $title-font-family;
-	padding: 1.5rem 0;
-	font-weight: 400;	
-}
-h2{
-	@include font($font-size-h2,$line-height-h2,$title-color);
-	font-family: $title-font-family;
-	padding: 1.5rem 0;
-	font-weight: 400;	
-}
-h3{
-	@include font($font-size-h3,$line-height-h3,$title-color);
-	font-family: $title-font-family;
-	padding: 1.5rem 0;
-	font-weight: 400;
-}
-
-/* text position */
-.text-left{text-align: left!important}
-.text-center{text-align: center!important}
-.text-right{text-align: right!important}
-.nowrap{white-space: nowrap!important;}
-
-
-/* loader */
-.loaded .main-wrapper{visibility:hidden;}
-.icon-load {
-	background: url(../img/loader.gif) no-repeat left top;
-	width: 4rem;
-	height: 4rem;
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	margin-left: -2rem;
-	margin-left: -2rem;
-	display: none;
-}
-.loaded .icon-load{display:block;}
-
-
 /*
 ================================================================================
 |                                     CONTENT                                 |
 ================================================================================
 */
-.content{	
-	background: #fff000;
-	flex-grow: 1;
+.content{
+	background-image: linear-gradient(transparent 100px, $base-bg 195px ), url("../img/main-bg.jpg");
+	background-size: 100% 100%, auto 200px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 1000px;
 	min-width: $min-width;
-	order: 2;
-	text-align:left;
-  width: 100%;
+	padding-top: 15rem;
+}
+#personal-info {
+	margin-bottom: 4rem;
+}
+#experience {
+	margin-bottom: 6rem;
+}
+
+.form-control {
+	border-color: $grey;
+	border-radius: .5rem;
+	font-size: 2rem;
+	font-weight: 400;
+	resize: none;
+	@include placeholder {
+		color: #c8c8c8;
+	}
+	&:focus {
+		border-color: $grey;
+		box-shadow: none;
+	}
+}
+textarea {
+	margin: 4rem auto;
+}
+
+.form-check {
+	.form-check-input {
+		display: none;
+		&:checked + .form-check-label:before {
+			background: $blue;
+			content: $check;
+		}
+	}
+	.form-check-label {
+		padding-left: 3.2rem;
+		position: relative;
+		&:hover:before {
+			background: #e9efff;
+		}
+		&:before {
+			background: #fff;
+			border: 1px solid $blue;
+			border-radius: .25rem;
+			color: #fff;
+			content: '';
+			display: block;
+			font-family: 'forgrant' !important;
+			font-size: 8px;
+			height: 2rem;
+			line-height: 2rem;
+			left: 0;
+			position: absolute;
+			text-align: center;
+			top: .3rem;
+			width: 2rem;
+		}
+	}//.form-check-label
+}//.form-check
+
+
+
+.form-group:not(.form-check) {
+	margin: auto;
+	max-width: 520px;
+	width: 100%;
+
+	input[type="text"],
+	input[type="email"] {
+		height: 5rem;
+		text-align: center;
+	}
+
+
+	.styled-select {
+		margin-bottom: 2rem;
+		max-width: 320px;
+		text-align: center;
+		.jq-selectbox__select {
+			font-weight: 400;
+			height: 100%;
+			line-height: 5rem;
+			padding-top: 0;
+		}//.jq-selectbox__select
+
+		.jq-selectbox__trigger {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			&:before {
+				color: $blue;
+				content: $carret;
+				font-family: 'forgrant' !important;
+				font-size: 8px;
+				transform: rotate(180deg);
+			}
+		}
+		.jq-selectbox__trigger-arrow {
+			display: none;
+		}
+		.jq-selectbox__dropdown {
+			border: none;
+			box-shadow: 0px 7px 40px -5px rgba(0,0,0,0.4);
+			overflow: auto;
+			top: 5rem;
+			li {
+				color: $blue;
+				font-size: 2rem;
+				&:first-child {
+					display: none;
+				}
+			}
+		}//.jq-selectbox__dropdown
+
+		&.opened .jq-selectbox__trigger:before {transform: none;}
+	}//.styled-select
+
+
+
+
+
+	label {
+		font-size: 1.4rem;
+		@include transition($default-transition);
+	}
+	.form-control:placeholder-shown + label {
+		font-size: 2rem;
+		opacity: 0;
+		transform: translateY(-3rem);
+		visibility: hidden;
+	}
+	.form-control:not(:focus) + label {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //IE10, IE11
+		label {visibility: hidden;}
+	}
+	@supports (display:-ms-grid) { //MICROSOFT EDGE
+		label {visibility: hidden;}
+	}
 }

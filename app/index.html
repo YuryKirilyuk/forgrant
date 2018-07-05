@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="format-detection" content="telephone=no">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 	<title>Main</title>
 	<meta name='description' content="" />
 	<meta name="keywords" content="" />
@@ -15,56 +15,151 @@
 </head>
 <body class="loaded">
 
-							
-<!-- BEGIN BODY -->
+<header>
+	<nav>
+		<ul class="nav justify-content-center">
+			<li class="nav-item">
+				<a class="nav-link active" href="#personal-info">Личная информация</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#experience">Опыт</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#about">О себе</a>
+			</li>
+		</ul>
+	</nav>
+</header>
 
-<div class="main-wrapper">
+<main class="content">
+	<form>
+		<div class="container text-center">
 
-<!-- BEGIN CONTENT -->
+			<div id="personal-info" class="row flex-column">
+				<div class="col-12">
+					<h1>Анкета</h1>
+					<i class="icon icon1"></i>
+					<h2>Личная информация</h2>
+					<div class="form-group">
+						<input type="text" class="form-control" id="input_fio" placeholder="ФИО" value="Кирилюк Юрий Алексеевич">
+						<label for="input_fio">ФИО</label>
+					</div>
+					<div class="form-group">
+						<select class="styled-select" id="year">
+							<option>Год рождения</option>
+							<option>1998</option>
+							<option>1997</option>
+							<option>1996</option>
+							<option>1995</option>
+							<option>1994</option>
+							<option>1993</option>
+							<option>1992</option>
+							<option>1991</option>
+							<option>1990</option>
+							<option>1989</option>
+							<option>1988</option>
+							<option>1987</option>
+							<option>1997</option>
+							<option>1996</option>
+							<option>1995</option>
+							<option>1994</option>
+							<option>1993</option>
+							<option>1992</option>
+							<option>1991</option>
+							<option>1990</option>
+							<option>1989</option>
+							<option>1988</option>
+							<option>1987</option>
+							<option selected>1979</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="input_place" placeholder="Место проживания" value="Черновцы">
+						<label for="input_place">Место проживания</label>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="input_skype" placeholder="Skype" value="yury_kirilyuk">
+						<label for="input_skype">Skype</label>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" id="input_email" placeholder="E-mail" value="kirilyukYury@gmail.com">
+						<label for="input_email">E-mail</label>
+					</div>
+				</div>
+			</div>
 
-	<main class="content">		
+			<div id="experience" class="row flex-column align-items-center">
+				<div class="col-8 col-xs-12">
+					<i class="icon icon2"></i>
+					<h2>Расскажите о своем опыте</h2>
+					<div class="row text-left">
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="check_bem" checked>
+								<label class="form-check-label" for="check_bem">БЭМ/OOCSS</label>
+							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="check_sass" checked>
+								<label class="form-check-label" for="check_sass">Stylus/LESS/SASS</label>
+							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="check_svg">
+								<label class="form-check-label" for="check_svg">Работаю с SVG</label>
+							</div>
+						</div><!-- //.col -->
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="check_semantic" checked>
+								<label class="form-check-label" for="check_semantic">Верстаю семантично</label>
+							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="check_js" checked>
+								<label class="form-check-label" for="check_js">ES2015/ES2016</label>
+							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="check_gulp" checked>
+								<label class="form-check-label" for="check_gulp">Gulp/GRUNT</label>
+							</div>
+						</div><!-- //.col -->
+						<div class="col-md-4 col-sm-12">
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="check_webpack">
+								<label class="form-check-label" for="check_webpack">Webpack</label>
+							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="check_jquery" checked>
+								<label class="form-check-label" for="check_jquery">jQuery</label>
+							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="check_git" checked>
+								<label class="form-check-label" for="check_git">Ипользую Git</label>
+							</div>
+						</div><!-- //.col -->
+					</div><!-- //.row -->
+				</div>
+			</div><!-- //.row -->
 
-	</main>	
-			
-<!-- CONTENT EOF   -->
+			<div id="about" class="row flex-column align-items-center mb-lg-5">
+				<div class="col col-lg-5 col-md-8 col-xs-12">
+					<i class="icon icon3"></i>
+					<h2 class="mb-lg-3">Расскажите о себе</h2>
+					<p>Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</p>
+					<div class="form-group">
+						<textarea class="form-control" rows="6" placeholder="Понравилась тем, что...">Вакансия привлекает возможностью заниматься любимым делом, попутно узнавать и изучать что-то новое во фронтенд направлении, что, несомненно, скажется на профессиональном росте и развитии. Адекватная компенсация также играет не маловажную роль в выборе вакансии.
+						</textarea>
+					</div>
+					<button type="submit" class="btn">Готово</button>
+				</div>
+			</div>
 
-
-
-<!-- BEGIN HEADER -->
-
-	<header>		
-		<div class="wrapper">
-
-		</div>		
-	</header>
+		</div><!-- //.container -->
+	</form>
+</main>
 	
-<!-- HEADER EOF   -->	
-
-
-
-<!-- BEGIN FOOTER -->	
-	
-	<footer>
-		<div class="wrapper">
-			
-		</div>	
-	</footer>
-	
-<!-- FOOTER EOF   -->
-
-</div>		
-
-<div class="icon-load"></div>		
-
-<!-- BODY EOF   -->
-	
-	<script src="js/jquery-3.0.0.min.js"></script>		
-	<script src="js/jquery-migrate-1.4.1.min.js" ></script>
-
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/components/popper.min.js"></script>
 	<script src="js/components/bootstrap.min.js" ></script>
-	<!--
 	<script src="js/components/jquery.formstyler.js" ></script>
-	-->
 	<script src="js/custom.js" ></script>
 </body>
 </html>

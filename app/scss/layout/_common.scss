@@ -6,8 +6,23 @@ body {
 	color: $main-color;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
-	line-height: 1.7rem;
-	box-sizing: border-box;
+	line-height: $base-line-height;
+}
+
+h1 {
+	color: #000;
+	font-size: 7rem;
+	font-weight: 100;
+	margin-bottom: 6rem;
+	text-align: center;
+}
+h2 {
+	color: $main-color;
+	font-size: 3rem;
+	font-weight: 300;
+	margin-bottom: 4.5rem;
+	margin-top: 2rem;
+	text-align: center;
 }
 
 button,
@@ -52,14 +67,6 @@ img {
 	max-width: 100%;
 }
 
-/*** PRE-DEFINED CLASSES ***/
-.inline {display: inline-block;}
-.hidden {display: none;}
-.disabled {pointer-events: none;}
-.pull-left {float: left;}
-.pull-right {float: right;}
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
+[class^="col-"] {
+	flex-basis: auto;
 }

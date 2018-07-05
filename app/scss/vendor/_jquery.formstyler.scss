@@ -23,19 +23,19 @@ $radio-checked-shadow: 0 0 1px 0px rgba(0,0,0,0.05);
 $radio-disabled-opacity: 0.5;
 
 /* select */
-$select-bg: #F5F5F5;
-$select-border-color: #C3C3C3;
+$select-bg: #fff;
+$select-border-color: #e5e5e5;
 $select-border-width: 1px;
-$select-border-radius: 3px;
+$select-border-radius: .5rem;
 $select-shadow: 0 0 2px 0px rgba(0,0,0,0);
-$select-height: 40px;
-$select-padding: 10px 40px 0 15px;
-$select-font-size:14px;
-$select-line-height:18px;
-$select-color:#000;
-$select-font:Arial, sans-serif;
+$select-height: 5rem;
+$select-padding: 10px 1.5rem 0;
+$select-font-size: 2rem;
+$select-line-height: 2rem;
+$select-color: $main-color;
+$select-font: $base-font-family;
 
-$select-opened-border-color: #000;
+$select-opened-border-color: $select-border-color;
 
 $trigger-arrow-bg:none;
 $trigger-border-width:5px;
@@ -53,8 +53,8 @@ $dropdown-item-font-size:$select-font-size;
 $dropdown-item-line-height:$select-line-height;
 $dropdown-item-font:$select-font;
 
-$dropdown-item-active-color:#FFF;
-$dropdown-item-active-bg:#000;
+$dropdown-item-active-color:inherit;
+$dropdown-item-active-bg:#fafafa;
 
 $dropdown-item-disbled-color:#ccc;
 $dropdown-item-disbled-bg:none;
@@ -66,12 +66,8 @@ $dropdown-item-disbled-bg:none;
 	height: 13px;
 	border: $checkbox-border-width solid $checkbox-border-color;
 	border-radius: $checkbox-border-radius;
-	-moz-border-radius: $checkbox-border-radius;
-	-webkit-border-radius: $checkbox-border-radius;
 	background: $checkbox-bg;
 	box-shadow: $checkbox-shadow;
-	-moz-box-shadow: $checkbox-shadow;
-	-webkit-box-shadow: $checkbox-shadow;
 	vertical-align: middle;
 	cursor: pointer;
 }
@@ -81,8 +77,6 @@ $dropdown-item-disbled-bg:none;
 	margin: 2px 0 0 2px;
 	background: $checkbox-checked-bg;
 	box-shadow: $checkbox-checked-shadow;
-	-moz-box-shadow: $checkbox-checked-shadow;
-	-webkit-box-shadow: $checkbox-checked-shadow;
 }
 .jq-checkbox.focused {
 	
@@ -97,12 +91,8 @@ $dropdown-item-disbled-bg:none;
 	height: 12px;
 	border: $radio-border-width solid $radio-border-color;
 	border-radius: $radio-border-radius;
-	-moz-border-radius: $radio-border-radius;
-	-webkit-border-radius: $radio-border-radius;
 	background: $radio-bg;
 	box-shadow: $radio-shadow;
-	-moz-box-shadow: $radio-shadow;
-	-webkit-box-shadow: $radio-shadow;
 	vertical-align: middle;
 	cursor: pointer;
 }

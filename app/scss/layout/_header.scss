@@ -4,9 +4,25 @@
 ================================================================================
 */
 header{
-	background: #f0f0f0;
+	background: #fff;
+	border-bottom: 1px solid #d9d9d9;
 	height: $headerHeight;
+	font-weight: 300;
 	min-width: $min-width;
-	order: 1;	
-	width: 100%; 
-}
+	width: 100%;
+
+	nav {height: 100%;}
+	.nav {
+		height: 100%;
+		.nav-item {
+			align-items: center;
+			display: flex;
+			text-transform: uppercase;
+			&:hover a,
+			&.active a {
+				color: #637ab4;
+			}
+		}
+	}//.nav
+
+}//header
